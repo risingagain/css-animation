@@ -119,7 +119,6 @@
   cursor: pointer;
   text-decoration: none;
   color: black;
-  white-space: nowrap;
   -webkit-animation: 1.5s right-to-left forwards;
           animation: 1.5s right-to-left forwards;
   -webkit-animation-delay: 1s;
@@ -130,6 +129,7 @@
 }
 .ani-container .el-2 .content .spotify-container .spotify span {
   font-family: "Outfit", Fallback, sans-serif;
+  white-space: nowrap;
 }
 .ani-container .el-2 .video-container {
   position: absolute;

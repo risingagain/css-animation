@@ -131,7 +131,6 @@
                     cursor: pointer;
                     text-decoration: none;
                     color: black;
-                    white-space: nowrap;
 
                     animation: 1.5s right-to-left forwards;
                     animation-delay: 1s;
@@ -142,6 +141,7 @@
 
                     span {
                         font-family: 'Outfit', Fallback, sans-serif;
+                        white-space: nowrap;
                     }
                 }
             }
