@@ -1,8 +1,12 @@
 @font-face {
     font-family: 'Outfit';
-    src: url('./fonts/Outfit-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/Outfit-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./fonts/Outfit-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */;
+    src: url('./fonts/Outfit-Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/Outfit-Regular.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('./fonts/Outfit-Regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+    ;
 }
 
 .ani-container {
@@ -110,32 +114,35 @@
                 }
             }
 
-            .spotify {
-                display: flex;
-                align-items: center;
-                width: 0;
-                position: absolute;
-                right: -122px;
-                height: 58px;
-                margin: 0 10px;
-                background-color: white;
-                border-radius: 4px;
-                padding-left: 20px;
-                box-sizing: border-box;
-                opacity: 0;
-                cursor: pointer;
-                text-decoration: none;
-                color: black;
+            .spotify-container {
+                filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1));
 
-                animation: 1.5s right-to-left forwards;
-                animation-delay: 1s;
+                .spotify {
+                    display: flex;
+                    align-items: center;
+                    width: 322px;
+                    height: 58px;
+                    margin: 0 10px;
+                    background-color: white;
+                    border-radius: 4px;
+                    padding-left: 20px;
+                    box-sizing: border-box;
+                    opacity: 0;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: black;
+                    white-space: nowrap;
 
-                img {
-                    margin-right: 30px;
-                }
+                    animation: 1.5s right-to-left forwards;
+                    animation-delay: 1s;
 
-                span {
-                    font-family: 'Outfit', Fallback, sans-serif;
+                    img {
+                        margin-right: 30px;
+                    }
+
+                    span {
+                        font-family: 'Outfit', Fallback, sans-serif;
+                    }
                 }
             }
         }
@@ -149,7 +156,6 @@
             animation-delay: 1s;
             opacity: 0;
             transform-origin: 0 100%;
-            margin-top: 70px;
 
             &>.video {
                 border-radius: 4px;
@@ -164,7 +170,7 @@
                 padding: 10px;
                 border-radius: 4px;
                 margin-bottom: 10px;
-                cursor: pointer;                
+                cursor: pointer;
                 text-decoration: none;
                 color: black;
                 box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
@@ -247,16 +253,13 @@
 
 @keyframes right-to-left {
     0% {
-        // clip-path: inset(0 0 0 100%);
-        width: 0;
+        clip-path: inset(0 0 0 100%);
         opacity: 1;
     }
 
     100% {
-        // clip-path: inset(0 0 0 0);
-        width: 322px;
+        clip-path: inset(0 0 0 0);
         opacity: 1;
-        box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
     }
 }
 
