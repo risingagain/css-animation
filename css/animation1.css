@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("./fonts/Outfit-Regular.woff2") format("woff2"), url("./fonts/Outfit-Regular.woff") format("woff"), url("./fonts/Outfit-Regular.ttf") format("truetype");
+}
+.ani-container {
+  width: 390px;
+  height: 732px;
+  background-color: white;
+  position: relative;
+}
+.ani-container .el-1 {
+  width: 300px;
+  height: 240px;
+  background-color: #9B62FF;
+  position: absolute;
+  left: 0%;
+  top: 200px;
+  -webkit-animation: 2s slide-right-animation forwards;
+          animation: 2s slide-right-animation forwards;
+}
+.ani-container .el-2 {
+  position: absolute;
+  width: 220px;
+  height: 566px;
+  left: 30px;
+  top: 150px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1;
+  box-shadow: 9px 16px 35px rgba(0, 0, 0, 0.2);
+  -webkit-animation: 1s spread-height ease-in-out;
+          animation: 1s spread-height ease-in-out;
+}
+.ani-container .el-2 .img-container {
+  position: relative;
+}
+.ani-container .el-2 .img-container img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.ani-container .el-2 .img-container .info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+}
+.ani-container .el-2 .img-container .info p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Outfit", Fallback, sans-serif;
+}
+.ani-container .el-2 .img-container .info .title {
+  font-size: 11px;
+}
+.ani-container .el-2 .img-container .info .description {
+  font-size: 9px;
+  margin-top: 10px;
+}
+.ani-container .el-2 .content .subscribe {
+  display: flex;
+  width: 322px;
+  height: 58px;
+  margin: 10px;
+}
+.ani-container .el-2 .content .subscribe input {
+  width: 222px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  border-radius: 4px 0 0 4px;
+  opacity: 0;
+  background-color: white;
+  -webkit-animation: 1s width-to-right forwards;
+          animation: 1s width-to-right forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  font-family: "Outfit", Fallback, sans-serif;
+}
+.ani-container .el-2 .content .subscribe input::-moz-placeholder {
+  color: #878787;
+  font-size: 15px;
+}
+.ani-container .el-2 .content .subscribe input:-ms-input-placeholder {
+  color: #878787;
+  font-size: 15px;
+}
+.ani-container .el-2 .content .subscribe input::placeholder {
+  color: #878787;
+  font-size: 15px;
+}
+.ani-container .el-2 .content .subscribe button {
+  width: 0;
+  background-color: black;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  opacity: 0;
+  font-family: "Outfit", Fallback, sans-serif;
+  -webkit-animation: 0.4s width-to-left forwards;
+          animation: 0.4s width-to-left forwards;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.ani-container .el-2 .content .spotify {
+  display: flex;
+  align-items: center;
+  width: 0;
+  position: absolute;
+  right: -122px;
+  height: 58px;
+  margin: 0 10px;
+  background-color: white;
+  border-radius: 4px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  -webkit-animation: 1.5s right-to-left forwards;
+          animation: 1.5s right-to-left forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.ani-container .el-2 .content .spotify img {
+  margin-right: 30px;
+}
+.ani-container .el-2 .content .spotify span {
+  font-family: "Outfit", Fallback, sans-serif;
+}
+.ani-container .el-2 .video-container {
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  -webkit-animation: 0.5s move-top forwards;
+          animation: 0.5s move-top forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  opacity: 0;
+  transform-origin: 0 100%;
+  margin-top: 70px;
+}
+.ani-container .el-2 .video-container > .video {
+  border-radius: 4px;
+  width: 100%;
+  border: none;
+}
+.ani-container .el-2 .video-container > .follow {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
+}
+.ani-container .el-2 .video-container > .follow > img {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+.ani-container .el-2 .video-container > .follow span {
+  font-size: 10px;
+  font-family: "Outfit", Fallback, sans-serif;
+}
+.ani-container .el-3 {
+  width: 283px;
+  height: 250px;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  z-index: 0;
+  opacity: 0;
+  -webkit-animation: 0.8s move-to-right forwards;
+          animation: 0.8s move-to-right forwards;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.ani-container .el-3 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes slide-right-animation {
+  0% {
+    width: 0;
+    height: 150px;
+  }
+  50% {
+    width: 300px;
+  }
+  100% {
+    height: 260px;
+  }
+}
+
+@keyframes slide-right-animation {
+  0% {
+    width: 0;
+    height: 150px;
+  }
+  50% {
+    width: 300px;
+  }
+  100% {
+    height: 260px;
+  }
+}
+@-webkit-keyframes spread-height {
+  0% {
+    height: 50px;
+    top: 300px;
+  }
+  100% {
+    height: 475px;
+    top: 150px;
+  }
+}
+@keyframes spread-height {
+  0% {
+    height: 50px;
+    top: 300px;
+  }
+  100% {
+    height: 475px;
+    top: 150px;
+  }
+}
+@-webkit-keyframes move-top {
+  from {
+    opacity: 1;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes move-top {
+  from {
+    opacity: 1;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes right-to-left {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 322px;
+    opacity: 1;
+    box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
+  }
+}
+@keyframes right-to-left {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 322px;
+    opacity: 1;
+    box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
+  }
+}
+@-webkit-keyframes width-to-right {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  60% {
+    width: 322px;
+    opacity: 1;
+  }
+  100% {
+    width: 222px;
+    opacity: 1;
+    box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
+  }
+}
+@keyframes width-to-right {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  60% {
+    width: 322px;
+    opacity: 1;
+  }
+  100% {
+    width: 222px;
+    opacity: 1;
+    box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
+  }
+}
+@-webkit-keyframes width-to-left {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    opacity: 1;
+    box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
+  }
+}
+@keyframes width-to-left {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    opacity: 1;
+    box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
+  }
+}
+@-webkit-keyframes move-to-right {
+  from {
+    right: 50px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes move-to-right {
+  from {
+    right: 50px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=animation1.css.map */
