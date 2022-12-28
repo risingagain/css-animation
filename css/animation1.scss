@@ -23,29 +23,37 @@
         left: 0%;
         top: 200px;
 
-        animation: 2s slide-right-animation forwards;
+        animation: 2s slide-right-animation forwards linear;
 
     }
 
     .el-2 {
         position: absolute;
         width: 220px;
-        height: 520px;
+        height: 0;
         left: 30px;
-        top: 150px;
         background-color: white;
         border-radius: 10px;
         z-index: 1;
         box-shadow: 9px 16px 35px rgba(0, 0, 0, 0.2);
+        transform: translateY(-50%);
+        top: 56%;
 
-        animation: 1s spread-height ease-in-out;
+        animation: 1s spread-height forwards linear;
+        animation-delay: 0.4s;
 
         .img-container {
             position: relative;
 
-            img {
+            >img {
                 width: 100%;
                 border-radius: 10px 10px 0 0;
+                opacity: 0;
+                // height: 0;
+
+                transform: translateY(50px);
+                animation: 0.8s profile-to-top forwards linear;
+                animation-delay: 0.6s;
             }
 
             .info {
@@ -74,13 +82,14 @@
 
         .content {
             .subscribe {
-                display: flex;
+                position: relative;
                 width: 322px;
                 height: 58px;
                 margin: 10px;
 
                 input {
-                    width: 222px;
+                    width: 322px;
+                    height: 58px;
                     border: none;
                     outline: none;
                     padding-left: 20px;
@@ -88,7 +97,7 @@
                     opacity: 0;
                     background-color: white;
 
-                    animation: 1s width-to-right forwards;
+                    animation: 1.2s width-to-right forwards linear;
                     animation-delay: 1s;
 
                     font-family: 'Outfit', Fallback, sans-serif;
@@ -101,6 +110,9 @@
 
                 button {
                     width: 0;
+                    height: 58px;
+                    right: 0;
+                    position: absolute;
                     background-color: black;
                     color: white;
                     border-radius: 0 4px 4px 0;
@@ -109,8 +121,8 @@
 
                     font-family: 'Outfit', Fallback, sans-serif;
 
-                    animation: 0.4s width-to-left forwards;
-                    animation-delay: 1.6s;
+                    animation: 0.6s width-to-left forwards linear;
+                    animation-delay: 2.2s;
                 }
             }
 
@@ -132,7 +144,7 @@
                     text-decoration: none;
                     color: black;
 
-                    animation: 1.5s right-to-left forwards;
+                    animation: 1s right-to-left forwards linear;
                     animation-delay: 1s;
 
                     img {
@@ -199,7 +211,7 @@
         z-index: 0;
         opacity: 0;
 
-        animation: 0.8s move-to-right forwards;
+        animation: 0.8s move-to-right forwards linear;
         animation-delay: 0.6s;
 
         img {
@@ -229,13 +241,11 @@
 
 @keyframes spread-height {
     0% {
-        height: 50px;
-        transform: translateY(300px);
+        height: 0;
     }
 
     100% {
-        height: 400px;
-        transform: translateY(150px);
+        height: 520px;
     }
 }
 
@@ -269,13 +279,8 @@
         opacity: 1;
     }
 
-    60% {
-        width: 322px;
-        opacity: 1;
-    }
-
     100% {
-        width: 222px;
+        width: 322px;
         opacity: 1;
         box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
     }
@@ -284,11 +289,13 @@
 @keyframes width-to-left {
     0% {
         width: 0;
+        clip-path: inset(0 0 0 100%);
         opacity: 1;
     }
 
     100% {
         width: 100px;
+        clip-path: inset(0 0 0 0);
         opacity: 1;
         box-shadow: 9px 14px 36px rgba(0, 0, 0, 0.2);
     }
@@ -303,5 +310,19 @@
     to {
         transform: translateX(50px);
         opacity: 1;
+    }
+}
+
+@keyframes profile-to-top {
+    from {
+        transform: translateY(50px);
+        opacity: 1;
+        // height: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        // height: 200px;
     }
 }
