@@ -40,7 +40,7 @@
         top: 56%;
 
         animation: 1s spread-height forwards linear;
-        animation-delay: 0.4s;
+        animation-delay: 0.5s;
 
         .img-container {
             position: relative;
@@ -49,7 +49,6 @@
                 width: 100%;
                 border-radius: 10px 10px 0 0;
                 opacity: 0;
-                // height: 0;
 
                 transform: translateY(50px);
                 animation: 0.8s profile-to-top forwards linear;
@@ -121,7 +120,7 @@
 
                     font-family: 'Outfit', Fallback, sans-serif;
 
-                    animation: 0.6s width-to-left forwards linear;
+                    animation: 0.4s width-to-left forwards linear;
                     animation-delay: 2.2s;
                 }
             }
@@ -317,12 +316,10 @@
     from {
         transform: translateY(50px);
         opacity: 1;
-        // height: 0;
     }
 
     to {
         transform: translateY(0);
         opacity: 1;
-        // height: 200px;
     }
 }
