@@ -175,8 +175,8 @@ body {
   box-sizing: border-box;
   -webkit-animation: 0.5s move-top forwards;
           animation: 0.5s move-top forwards;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   opacity: 0.01;
   visibility: hidden;
   transform: scaleY(0);
