@@ -177,7 +177,7 @@ body {
           animation: 0.5s move-top forwards;
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
-  opacity: 0;
+  opacity: 0.01;
   transform-origin: 0 100%;
 }
 .ani-container .el-wrapper .el-2 .video-container > img {
