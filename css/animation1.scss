@@ -196,6 +196,9 @@ body {
                 animation: 0.5s move-top forwards;
                 animation-delay: 1.4s;
                 opacity: 0.01;
+                visibility: hidden;
+
+                transform: scaleY(0);
                 transform-origin: 0 100%;
 
                 &>img {
@@ -284,11 +287,13 @@ body {
     from {
         opacity: 1;
         transform: scaleY(0);
+        visibility: visible;
     }
 
     to {
         opacity: 1;
         transform: scaleY(1);
+        visibility: visible;
     }
 }
 

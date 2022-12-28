@@ -178,6 +178,8 @@ body {
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
   opacity: 0.01;
+  visibility: hidden;
+  transform: scaleY(0);
   transform-origin: 0 100%;
 }
 .ani-container .el-wrapper .el-2 .video-container > img {
@@ -271,20 +273,24 @@ body {
   from {
     opacity: 1;
     transform: scaleY(0);
+    visibility: visible;
   }
   to {
     opacity: 1;
     transform: scaleY(1);
+    visibility: visible;
   }
 }
 @keyframes move-top {
   from {
     opacity: 1;
     transform: scaleY(0);
+    visibility: visible;
   }
   to {
     opacity: 1;
     transform: scaleY(1);
+    visibility: visible;
   }
 }
 @-webkit-keyframes right-to-left {
